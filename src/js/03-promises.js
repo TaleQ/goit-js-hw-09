@@ -3,7 +3,7 @@ import { Notify } from 'notiflix/build/notiflix-notify-aio';
 const form = document.querySelector('.form');
 form.addEventListener(
   'submit',
-  (submitForm = event => {
+  submitForm = event => {
     event.preventDefault();
     let firstDelay = Number(form.elements.delay.value);
     let currentDelay = firstDelay;
@@ -22,7 +22,7 @@ form.addEventListener(
         createPromise(i, currentDelay).then(onSuccess).catch(onError);
       }
     }
-  })
+  }
 );
 
 function createPromise(position, delay) {
