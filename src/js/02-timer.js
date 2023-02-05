@@ -4,7 +4,6 @@ import { Notify } from 'notiflix/build/notiflix-notify-aio';
 
 const startTimerBtn = document.querySelector('button[data-start]');
 startTimerBtn.disabled = true;
-startTimerBtn.classList.add("timer-button")
 
 let timerId = null;
 
@@ -54,7 +53,6 @@ startTimerBtn.addEventListener('click', () => {
 function startTimer() {
   const ms = datePicker.selectedDates[0] - Date.now();
   const timerTime = convertMs(ms);
-  console.log(timerTime);
   const { days, hours, minutes, seconds } = timerTime;
   document.querySelector('span[data-days]').textContent = days;
   document.querySelector('span[data-hours]').textContent = hours;
